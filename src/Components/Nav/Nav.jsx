@@ -1,10 +1,10 @@
 const Nav = () => {
   return (
     <header>
-      <nav className="py-6  ">
-        <div className="navbar bg-base-100 shadow-sm flex justify-evenly items-center">
+      <nav className="  ">
+        <div className="navbar bg-base-100 shadow-sm flex justify-evenly items-center py-6">
           <div className="">
-            <a className=" text-4xl bg-clip-text text-transparent font-bold bg-linear-to-r from-[#4F39F6] to-[#9514FA]">
+            <a className=" text-4xl bg-clip-text text-transparent font-bold bg-linear-to-r from-[#4F39F6] to-[#9514FA] hover:cursor-pointer">
               DigiTools
             </a>
           </div>
