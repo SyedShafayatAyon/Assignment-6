@@ -1,7 +1,9 @@
 import { Play } from "lucide-react";
 import bannerImg from "../../../assets/banner.png";
+import { useState } from "react";
 
 const Banner = () => {
+  const [selectBtn, setSelectBtn] = useState("ExploreProducts");
   return (
     <div className="flex items-center justify-between mt-20 container mx-auto">
       <div className="space-y-6">
@@ -25,9 +27,22 @@ const Banner = () => {
             Explore Products
           </p>
           <div className="space-x-4">
-            <button className="btn rounded-full">Explore Products</button>
-            <button className="btn rounded-full">
-              <Play /> Watch Demo
+            <button
+              className={`btn rounded-full  ${selectBtn === "ExploreProducts" ? "text-white bg-linear-to-r from-[#4F39F6] to-[#9514FA]" : "border-[#4F39F6] bg-white bg-clip-text text-transparent bg-linear-to-r from-[#4F39F6] to-[#9514FA]"}`}
+              onClick={() => setSelectBtn("ExploreProducts")}
+            >
+              Explore Products
+            </button>
+            <button
+              className={`btn rounded-full ${selectBtn === "WatchDemo" ? "text-white bg-linear-to-r from-[#4F39F6] to-[#9514FA]" : "border-[#4F39F6] bg-white bg-clip-text text-transparent bg-linear-to-r from-[#4F39F6] to-[#9514FA]"}`}
+              onClick={() => setSelectBtn("WatchDemo")}
+            >
+              <Play
+                className={
+                  selectBtn === "WatchDemo" ? "text-white" : "text-[#4F39F6]"
+                }
+              />
+              Watch Demo
             </button>
           </div>
         </div>
