@@ -5,7 +5,7 @@ import { useState } from "react";
 const Banner = () => {
   const [selectBtn, setSelectBtn] = useState("ExploreProducts");
   return (
-    <div className="flex items-center justify-between mt-20 container mx-auto">
+    <div className="flex flex-col gap-20 lg:flex-row items-center justify-between mt-20 container mx-auto ">
       <div className="space-y-6">
         <div className="flex items-center gap-1.5 bg-[#E1E7FF] px-4 rounded-full max-w-75">
           <div className="inline-grid *:[grid-area:1/1]">
