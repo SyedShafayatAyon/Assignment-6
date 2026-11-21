@@ -6,6 +6,7 @@ import Stats from "./Components/Main/Stats/Stats";
 import Nav from "./Components/Nav/Nav";
 import { useState } from "react";
 import { ToastContainer } from "react-toastify";
+import Step from "./Components/Main/Step/Step";
 
 const productPromise = axios.get("ProductDetails.json");
 
@@ -33,6 +34,8 @@ function App() {
           setHandelTotalPrice={setHandelTotalPrice}
           setCartProducts={setCartProducts}
         ></Products>
+
+        <Step></Step>
       </main>
 
       <footer></footer>
