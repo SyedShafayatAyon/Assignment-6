@@ -7,6 +7,7 @@ import Nav from "./Components/Nav/Nav";
 import { useState } from "react";
 import { ToastContainer } from "react-toastify";
 import Step from "./Components/Main/Step/Step";
+import Pricing from "./Components/Main/Pricing/Pricing";
 
 const productPromise = axios.get("ProductDetails.json");
 
@@ -36,6 +37,7 @@ function App() {
         ></Products>
 
         <Step></Step>
+        <Pricing></Pricing>
       </main>
 
       <footer></footer>
