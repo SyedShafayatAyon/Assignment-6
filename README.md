@@ -1,16 +1,24 @@
-# React + Vite
+DigiTools
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+DigiTools is a responsive, single-page marketplace for digital products built with React, Vite, and Tailwind CSS. Visitors can browse a curated product catalog, compare pricing plans, manage their shopping cart, and complete checkout within a single interface.
 
-Currently, two official plugins are available:
+Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- React 19: Building the UI with reusable components and hooks
+- Vite: Fast development server and production build tool
+- Tailwind CSS 4: Utility-first styling and responsive layout
+- DaisyUI: Ready-made UI components such as the navbar, cards, and buttons
+- Axios: Fetching product data from a JSON file
+- React Toastify: Toast notifications for cart and checkout actions
+- React Icons / Lucide: Icon libraries
 
-## React Compiler
+Key Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. Interactive Shopping Cart
+Add products with a single click and remove them anytime. The navbar cart badge and total price update instantly, and toast notifications confirm every action, including checkout.
 
-## Expanding the ESLint configuration
+2. Products and Cart Toggle
+Switch between the Products list and the Cart view without leaving the page. The cart shows each selected item, the total price, a Proceed to Checkout button, and a clean empty state when no items are in the cart.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+3. Fully Responsive Design
+Adapts smoothly from mobile to desktop screens with a flexible product grid, stacked stats and pricing sections, and a mobile-friendly navbar and footer.
