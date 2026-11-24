@@ -8,20 +8,20 @@ import { useState } from "react";
 import { ToastContainer } from "react-toastify";
 import Step from "./Components/Main/Step/Step";
 import Pricing from "./Components/Main/Pricing/Pricing";
+import Footer from "./Components/Footer/Footer";
 
 const productPromise = axios.get("ProductDetails.json");
 
 function App() {
   const [cartProducts, setCartProducts] = useState([]);
   const [handelTotalPrice, setHandelTotalPrice] = useState(0);
+  const totalPrice = cartProducts.reduce((sum, p) => sum + p.price, 0);
+
   return (
     <>
       <header>
         <nav>
-          <Nav
-            cartProducts={cartProducts}
-            handelTotalPrice={handelTotalPrice}
-          />
+          <Nav cartProducts={cartProducts} totalPrice={totalPrice} />
         </nav>
       </header>
 
@@ -40,7 +40,9 @@ function App() {
         <Pricing></Pricing>
       </main>
 
-      <footer></footer>
+      <footer>
+        <Footer></Footer>
+      </footer>
       <ToastContainer></ToastContainer>
     </>
   );
